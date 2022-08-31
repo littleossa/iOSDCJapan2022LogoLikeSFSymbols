@@ -19,6 +19,7 @@ struct iOSDCJapan2022Logo: View {
             ZStack {
                 ForEach(SymbolType.allCases) { type in
                     let appearance = type.configuration
+                    
                     iOSDCJapan2022Symbol(size: baseSize * appearance.sizeMagnification,
                                          color: appearance.color)
                     .offset(x: baseSize * appearance.offsetXMagnification,
@@ -26,10 +27,10 @@ struct iOSDCJapan2022Logo: View {
                 }
                 
                 Image(systemName: "circle.square.fill")
+                    .foregroundColor(.white)
                     .font(.system(size: baseSize,
                                   weight: .regular,
                                   design: .default))
-                    .foregroundColor(.white)
             }
             .position(x: proxy.frame(in: .local).midX,
                       y: proxy.frame(in: .local).midY)
