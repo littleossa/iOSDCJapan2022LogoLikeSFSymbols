@@ -4,7 +4,7 @@
 //
 //  Created by littleossa
 //
-import SwiftUI
+import CoreGraphics
 
 struct Offset: Hashable {
     let x: CGFloat
